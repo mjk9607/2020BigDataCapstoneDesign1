@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>Video Streaming Demonstration</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../static/css/public.css"/>
+  <script type="text/javascript" src="../static/js/public.js"></script>
+  <title>Video Streaming Demonstration</title>
 </head>
 <body>
-   <h1>Video Streaming Demonstration</h1>
-   <img id="bg" src="{{ url_for('video_feed') }}">
+  <div>
+    <h1>Video Streaming Demonstration</h1>
+    <img class="noImg" src="../static/img/noImage.svg" alt="No Image">
+    <strong>No Image</strong>
+    <button>Live</button>
+    <button>Screen Shot</button>
+  </div>
 </body>
 </html>
