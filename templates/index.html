@@ -2,14 +2,10 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Hello from Flask</title>
+    <title>Video Streaming Demonstration</title>
 </head>
 <body>
-    <form action="/login" method="post">
-        <input type="text" id="username" />
-        <input type="password" id="password"/>
-        <input type="submit">
-    </form>
-
+   <h1>Video Streaming Demonstration</h1>
+   <img id="bg" src="{{ url_for('video_feed') }}">
 </body>
 </html>
