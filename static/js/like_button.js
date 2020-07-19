@@ -6,6 +6,18 @@ class LikeButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = { liked: false };
+
+    let myFirstPromise = new Promise((resolve, reject) => {
+    setTimeout(function(){
+        resolve("Success!"); // Yay! Everything went well!
+    }, 250);
+    });
+
+    myFirstPromise.then((successMessage) => {
+      // successMessage is whatever we passed in the resolve(...) function above.
+      // It doesn't have to be a string, but if it is only a succeed message, it probably will be.
+      console.log("Yay! " + successMessage);
+    });
   }
 
   render() {
