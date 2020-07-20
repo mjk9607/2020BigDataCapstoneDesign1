@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
 import pyautogui
-import threading
 
 class VideoCamera(object):
   def get_frame(self):
@@ -10,4 +9,4 @@ class VideoCamera(object):
     img_frame = cv2.cvtColor(img_frame, cv2.COLOR_RGB2BGR)
 
     ret, jpeg = cv2.imencode('.jpeg', img_frame)
-    return jpeg.tobytes()
+    return jpeg
