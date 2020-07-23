@@ -1,30 +1,17 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" style="height: 100%;">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../static/css/public.css"/>
-  <script type="text/javascript" src="../static/js/public.js"></script>
-  <title>Video Streaming Demonstration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script type="text/javascript" src="../static/js/public.js"></script> -->
+  <title>index</title>
 </head>
-<body>
-  <div style="text-align: center;">
-    <h1>Video Streaming Demonstration</h1>
-    <div>
-      <!-- <object id="video" class="video" data="/video_feed" type="image/jpeg">
-        <img class="noImg" src="../static/img/noImage.svg" alt="No Image">
-        <strong>No Image</strong>
-      </object> -->
-    </div>
-    <div>
-      <button>Live</button>
-      <button>Gallery</button>
-      <button id="screenshot">ScreenShot</button>
-      <button>next</button>
-      <button>prev</button>
-    </div>
-    <div>
-      
-    </div>
-  </div>
+<body style="height: 100%; margin: 0em; display: flex;">
+      <div style="width: 50%; display: flex; background: #ff7e7e; transition">
+        <a href="javascript:click();" style="width: 100%; background: url(../static/img/live.svg) no-repeat center; background-size: 10em auto;"></a>
+      </div>
+      <div style="width: 50%; display: flex; background: #4ed1f8;">
+        <a href="./gallery.html" style="width: 100%; background: url(../static/img/gallery.svg) no-repeat center; background-size: 10em auto;"></a>
+      </div>
 </body>
 </html>

@@ -1,24 +1,20 @@
 'use strict'
 
+let $ = (selector) => {
+  return document.querySelector(selector);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-
-  console.log('load finish');
-
-  let $ = { init, event };
-
-  $ = (selector) => {
-    return document.querySelector(selector);
-  }
-
-  let outside;
-
+  
+  console.log('ready start');
+  
   $.init = (() => {
-    fetch('http://localhost:5000/video_feed')
-      .then(response => response.blob())
-      .then(images => {
-        outside = URL.createObjectURL(images)
-        console.log(outside)
-      })
+    
+    fetch('/getsize.json')
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.log(error))
+
   }) ()
 
   $.event = (() => {
@@ -30,3 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }) ()
 
 })
+
+window.onload = () => {
+
+  console.log('load start');
+
+  $('#player').removeChild($('.loading'));
+}

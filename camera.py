@@ -12,3 +12,9 @@ class VideoCamera(object):
 
     ret, jpeg = cv2.imencode('.jpeg', frame)
     return jpeg.tobytes()
+
+  def get_size(self):
+    width = self.video.get(cv2.CAP_PROP_FRAME_WIDTH)
+    height = self.video.get(cv2.CAP_PROP_FRAME_HEIGHT)
+
+    return width, height
